@@ -31,12 +31,12 @@
 1. По поводу "Парсер информации с любого маркетплейса любой страны"
 Реализован селекторы для сайтов alza.cz amazon.es и для других — универсальный набор селекторов. 
 Можно легко добавлять новые для любых сайтов. Подключаются через ParserFactory
-2.    
+
 
 ### Среда разработки
 WSL Windows 11, PHP 8.0, Postgres Docker (image: postgres:15-alpine)
 
-###Установка
+### Установка
 
 1. Склонируйте репозиторий: git clone https://github.com/vadaha/slotegrator.git
 2. Установите зависимости: `composer install`
@@ -45,22 +45,23 @@ WSL Windows 11, PHP 8.0, Postgres Docker (image: postgres:15-alpine)
 5. Выполните миграции: `php bin/console doctrine:migrations:migrate`
 6. Запустите сервер: `symfony server:start`
 
-###Использование
+### Использование
 После установки открываем http://localhost:8000/product/ Откроется список товаров. 
 Нажмем на кнопку "Create new", 
    1. можем заполнить поля нового товара и нажать Save.
    2. или заполнить урл для парсинга и нажать Parsing
 
-###Тестирование
+### Тестирование
 Тест в tests/Parser/ParserTest.php 
 Запускаем: php ./bin/phpunit
 
-###Возможные проблемы
+### Возможные проблемы
 "chromedriver" binary not found. 
 Install it using the package manager of your operating system or by running 
 "composer require --dev dbrekelmans/bdi && vendor/bin/bdi detect drivers".
 
 в этом случае вписываем путь к драйверу в src/Parser/Parser.php на 31 строке
 
-###Screenshot
-В img.png
+### Screenshot
+
+![Иллюстрация к проекту](https://github.com/vadaha/slotegator/blob/main/img.png?raw=true)
